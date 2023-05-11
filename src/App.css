@@ -1,0 +1,16 @@
+.sai {
+  display: flex;
+  flex-direction: row;
+}
+
+.kumar{
+  display: flex;
+  flex-direction: row;
+  width: 990px;
+  /* color: blue; */
+  margin-left: 160px;
+}
+
+.doddi{
+  width: 190px;
+}
