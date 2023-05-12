@@ -2,18 +2,24 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 interface CaseData {
-  date: string;
-  cases: number;
+
+  cases: any;
+  deaths:any;
+  recovered:any
 }
 
 interface CasesState {
-  data: CaseData[];
+  data: CaseData;
   loading: boolean;
   error: string | null;
 }
 
 const initialState: CasesState = {
-  data: [],
+  data: {
+    cases: {},
+    deaths:{},
+    recovered:{}
+  },
   loading: false,
   error: null,
 };
@@ -27,7 +33,7 @@ export const fetchCasesData = createAsyncThunk(
     return data;
   }
 
-  );
+);
 
 const casesSlice = createSlice({
   name: 'cases',
